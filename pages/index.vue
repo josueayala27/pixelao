@@ -62,8 +62,8 @@ export default {
   },
   methods: {
     async print() {
+      this.isLoading = true
       try {
-        this.isLoading = true
         const node = document.getElementById('board')
         const image = await htmlToImage.toPng(node)
         const link = document.createElement('a')
