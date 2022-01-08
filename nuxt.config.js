@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sprite-animation',
+    title: 'Pixel Art Maker',
     htmlAttrs: {
       lang: 'en',
     },
