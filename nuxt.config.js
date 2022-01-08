@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'sprite-animation',
+    title: 'Pixel Art Maker',
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,15 +20,14 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -36,4 +35,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Google font configuration
+  googleFonts: {
+    preconnect: true,
+    preload: true,
+    download: true,
+    overwriting: true,
+    families: {
+      Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    },
+  },
 }

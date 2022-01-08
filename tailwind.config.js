@@ -1,8 +1,18 @@
 module.exports = {
   mode: 'jit',
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    fontFamily: {
+      sans: [
+        'Inter',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Apple Color Emoji',
+        'Helvetica Neue',
+        'sans-serif',
+      ],
+    },
     extend: {},
   },
   variants: {
