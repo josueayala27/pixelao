@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button><slot /></button>
+    <button class="p-4"><slot /></button>
   </div>
 </template>
 
