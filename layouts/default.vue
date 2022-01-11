@@ -5,7 +5,12 @@
     >
       <div class="flex fill-current">Nuxt pixel art it is free to use 💕</div>
     </nav>
-    <nav class="border-b p-2 flex justify-end">
+    <nav class="border-b p-2 flex justify-between">
+      <div>
+        <Button color="gray">File</Button>
+        <Button color="gray">Settings</Button>
+        <Button color="gray">Board</Button>
+      </div>
       <Button>Download</Button>
     </nav>
     <div class="h-full flex">
