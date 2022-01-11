@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Pixel Art Maker',
+    title: 'Pixelao - Create pixel drawings',
     htmlAttrs: {
       lang: 'en',
     },
@@ -27,6 +27,8 @@ export default {
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
     '@nuxt/postcss8',
+    // https://www.npmjs.com/package/@nuxtjs/svg
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
