@@ -1,10 +1,14 @@
 <template>
   <div class="h-screen flex flex-col">
-    <nav
-      class="w-full p-4 flex justify-center text-white bg-gradient-to-r to-purple-400 from-blue-400"
-    >
-      <div class="flex fill-current">Nuxt pixel art it is free to use 💕</div>
-    </nav>
+    <Navbar>
+      <template #right>
+        <div class="h-full py-3 px-2">
+          <div class="h-full bg-gray-300 w-[1.5px]"></div>
+        </div>
+        <ItemNavbar><Icon name="share" /> Export</ItemNavbar>
+        <ItemNavbar><Icon name="heart" />Save</ItemNavbar>
+      </template>
+    </Navbar>
     <div class="h-full flex">
       <div
         class="w-[4rem] h-full border-r flex items-center justify-center flex-col gap-y-2"
@@ -70,7 +74,12 @@
 </template>
 
 <script>
+import Navbar from '@/components/layout/Navbar.vue'
+import ItemNavbar from '@/components/layout/ItemNavbar.vue'
+import Icon from '@/components/ui/Icon.vue'
+
 export default {
   name: 'DefaultLayout',
+  components: { Navbar, ItemNavbar, Icon },
 }
 </script>

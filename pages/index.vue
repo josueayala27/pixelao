@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full h-full items-center flex-col justify-center">
+  <div class="flex w-full h-full items-center flex-col justify-center mt-5">
     <div class="border">
       <div id="board" class="w-[600px] flex flex-wrap">
         <div
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import * as htmlToImage from 'html-to-image'
+import { downloader } from '@/utils/images'
 
 export default {
   name: 'IndexPage',
@@ -45,13 +45,9 @@ export default {
     async print() {
       this.isLoading = true
       try {
-        const node = document.getElementById('board')
-        const image = await htmlToImage.toPng(node)
-        const link = document.createElement('a')
+        const NAME = 'nuxt-pixel-art'
+        await downloader(document.getElementById('board'), `${NAME}.png`)
         this.isLoading = false
-        link.download = 'nuxt-pixelart.png'
-        link.href = image
-        link.click()
       } catch (error) {
         console.error(error)
       }
