@@ -25,9 +25,19 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://google-fonts.nuxtjs.org/
-    '@nuxtjs/google-fonts',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        preconnect: true,
+        preload: true,
+        download: true,
+        overwriting: true,
+        families: {
+          Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        },
+      },
+    ],
     '@nuxt/postcss8',
-    // https://www.npmjs.com/package/@nuxtjs/svg
     '@nuxtjs/svg',
   ],
 
@@ -41,17 +51,6 @@ export default {
         tailwindcss: {},
         autoprefixer: {},
       },
-    },
-  },
-
-  // Google font configuration
-  googleFonts: {
-    preconnect: true,
-    preload: true,
-    download: true,
-    overwriting: true,
-    families: {
-      Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
 }
