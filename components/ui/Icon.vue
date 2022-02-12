@@ -1,5 +1,9 @@
 <template>
-  <div class="w-[1.2rem] aspect-square" v-html="icon"></div>
+  <div
+    class="w-[1.2rem] aspect-square"
+    @click="$emit('click')"
+    v-html="icon"
+  ></div>
 </template>
 
 <script>

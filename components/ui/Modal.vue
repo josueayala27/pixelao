@@ -1,0 +1,53 @@
+<template>
+  <div
+    v-if="visible"
+    class="fixed h-screen w-full flex items-center justify-center bg-black/30"
+  >
+    <transition
+      enter-active-class="transition ease-out duration-100"
+      enter-class="transform opacity-0 scale-95"
+      enter-to-class="transform opacity-100 scale-100"
+      leave-active-class="transition ease-in duration-75"
+      leave-class="transform opacity-100 scale-100"
+      leave-to-class="transform opacity-0 scale-95"
+    >
+      <div
+        v-if="visible"
+        class="bg-white shadow-lg rounded-xl min-w-[23.75rem]"
+      >
+        <div class="header relative p-6 text-lg font-semibold text-black">
+          <div
+            class="flex items-center justify-center left-0 inset-y-0 absolute p-6 z-10"
+          >
+            <Icon
+              name="close"
+              class="cursor-pointer text-gray-600 transition-all duration-300 hover:text-black"
+              @click="$emit('close')"
+            />
+          </div>
+          <div
+            class="text-center absolute flex items-center justify-center inset-0 select-none"
+          >
+            {{ title }}
+          </div>
+        </div>
+        <div class="p-6 border-t">
+          <slot />
+        </div>
+      </div>
+    </transition>
+  </div>
+</template>
+
+<script>
+import Icon from '@/components/ui/Icon.vue'
+
+export default {
+  name: 'ModalComponent',
+  components: { Icon },
+  props: {
+    title: { type: String, default: '' },
+    visible: { type: Boolean, default: false },
+  },
+}
+</script>
