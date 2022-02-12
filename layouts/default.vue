@@ -5,7 +5,18 @@
       title="Export"
       @close="modals.export = false"
     >
-      Export Image code...
+      <p>I hate you all very much, I'm going to sleep 😈</p>
+      <div class="mt-4 flex justify-end gap-2">
+        <Button
+          color="gray"
+          @click="test('Cancel Export...'), (modals.export = false)"
+        >
+          Cancel
+        </Button>
+        <Button @click="test('Download your uggly drawing...')">
+          Export
+        </Button>
+      </div>
     </Modal>
     <Navbar>
       <template #right>
@@ -37,10 +48,11 @@ import Navbar from '@/components/layout/Navbar.vue'
 import ItemNavbar from '@/components/layout/ItemNavbar.vue'
 import Icon from '@/components/ui/Icon.vue'
 import Modal from '@/components/ui/Modal.vue'
+import Button from '@/components/ui/Button.vue'
 
 export default {
   name: 'DefaultLayout',
-  components: { Navbar, ItemNavbar, Icon, Modal },
+  components: { Navbar, ItemNavbar, Icon, Modal, Button },
   data() {
     return {
       modals: {
@@ -51,6 +63,9 @@ export default {
   methods: {
     exportImage() {
       this.modals.export = true
+    },
+    test(message) {
+      console.log(message)
     },
   },
 }

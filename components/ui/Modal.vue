@@ -26,7 +26,7 @@
         class="fixed h-screen w-full flex items-center justify-center"
       >
         <div class="bg-white shadow-lg rounded-xl min-w-[23.75rem]">
-          <div class="header relative p-6 text-lg font-semibold text-black">
+          <header class="header relative p-6 text-lg font-semibold text-black">
             <div
               class="flex items-center justify-center left-0 inset-y-0 absolute p-6 z-10"
             >
@@ -41,7 +41,7 @@
             >
               {{ title }}
             </div>
-          </div>
+          </header>
           <div class="p-6 border-t">
             <slot />
           </div>

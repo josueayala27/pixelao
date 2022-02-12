@@ -32,16 +32,14 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('mousedown', () => {
-        this.config.isHold = true
-      })
-      window.addEventListener('mouseup', () => {
-        this.config.isHold = false
-      })
+      this.loadListeners()
       this.draw()
     })
   },
   methods: {
+    /**
+     * @description: Download the resources (image) 🥺
+     */
     async print() {
       this.isLoading = true
       try {
@@ -52,6 +50,10 @@ export default {
         console.error(error)
       }
     },
+
+    /**
+     * @description: Listeners to draw on board
+     */
     draw() {
       for (let index = 0; index < this.board.size * this.board.size; index++) {
         const element = document.getElementById(index)
@@ -64,6 +66,10 @@ export default {
           }
         })
       }
+    },
+    loadListeners() {
+      window.addEventListener('mousedown', () => (this.config.isHold = true))
+      window.addEventListener('mouseup', () => (this.config.isHold = false))
     },
   },
 }
