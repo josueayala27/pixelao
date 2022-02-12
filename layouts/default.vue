@@ -2,8 +2,14 @@
   <div class="h-screen flex flex-col">
     <Navbar>
       <template #right>
+        <ItemNavbar><Icon name="dots-horizontal" /></ItemNavbar>
         <div class="h-full py-3 px-2">
-          <div class="h-full bg-gray-300 w-[1.5px]"></div>
+          <div class="h-full bg-gray-300 w-[1px]"></div>
+        </div>
+        <ItemNavbar><Icon name="left-arrow" /></ItemNavbar>
+        <ItemNavbar><Icon name="right-arrow" /></ItemNavbar>
+        <div class="h-full py-3 px-2">
+          <div class="h-full bg-gray-300 w-[1px]"></div>
         </div>
         <ItemNavbar><Icon name="share" /> Export</ItemNavbar>
         <ItemNavbar><Icon name="heart" />Save</ItemNavbar>
