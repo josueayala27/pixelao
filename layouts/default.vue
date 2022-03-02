@@ -24,7 +24,7 @@
         <div class="h-full py-3 px-2">
           <div class="h-full bg-gray-300 w-[1px]"></div>
         </div>
-        <ItemNavbar><Icon name="left-arrow" /></ItemNavbar>
+        <ItemNavbar @click="undo"><Icon name="left-arrow" /></ItemNavbar>
         <ItemNavbar><Icon name="right-arrow" /></ItemNavbar>
         <div class="h-full py-3 px-2">
           <div class="h-full bg-gray-300 w-[1px]"></div>
@@ -44,15 +44,10 @@
 </template>
 
 <script>
-import Navbar from '@/components/layout/Navbar.vue'
-import ItemNavbar from '@/components/layout/ItemNavbar.vue'
-import Icon from '@/components/ui/Icon.vue'
-import Modal from '@/components/ui/Modal.vue'
-import Button from '@/components/ui/Button.vue'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'DefaultLayout',
-  components: { Navbar, ItemNavbar, Icon, Modal, Button },
   data() {
     return {
       modals: {
@@ -61,11 +56,15 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('controls', ['test']),
     exportImage() {
       this.modals.export = true
     },
     test(message) {
       console.log(message)
+    },
+    undo() {
+      this.test('Undo 👌')
     },
   },
 }

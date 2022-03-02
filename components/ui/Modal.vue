@@ -52,11 +52,8 @@
 </template>
 
 <script>
-import Icon from '@/components/ui/Icon.vue'
-
 export default {
   name: 'ModalComponent',
-  components: { Icon },
   props: {
     title: { type: String, default: '' },
     visible: { type: Boolean, default: false },
