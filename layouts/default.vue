@@ -20,7 +20,23 @@
     </Modal>
     <Navbar>
       <template #right>
-        <ItemNavbar><Icon name="dots-horizontal" /></ItemNavbar>
+        <ItemNavbar>
+          <Dropdown>
+            <Icon name="dots-horizontal" />
+            <template #items>
+              <ItemDropdown><Icon name="cog" />Settings</ItemDropdown>
+              <ItemDropdown
+                ><Icon name="cube-transparent" />Save as .pixelao</ItemDropdown
+              >
+              <ItemDropdown @click="exportImage()"
+                ><Icon name="save" />Download</ItemDropdown
+              >
+              <ItemDropdown
+                ><Icon name="cursor-click" />Watch tutorial</ItemDropdown
+              >
+            </template>
+          </Dropdown>
+        </ItemNavbar>
         <div class="h-full py-3 px-2">
           <div class="h-full bg-gray-300 w-[1px]"></div>
         </div>
@@ -30,9 +46,9 @@
           <div class="h-full bg-gray-300 w-[1px]"></div>
         </div>
         <ItemNavbar @click="exportImage()"
-          ><Icon name="share" /> Export</ItemNavbar
+          ><Icon name="save" /> Download</ItemNavbar
         >
-        <ItemNavbar><Icon name="heart" />Save</ItemNavbar>
+        <!-- <ItemNavbar><Icon name="heart" />Save</ItemNavbar> -->
       </template>
     </Navbar>
     <div class="h-full flex">

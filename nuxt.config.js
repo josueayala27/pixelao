@@ -15,14 +15,15 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/main.css', '@/assets/css/tooltip.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/v-tooltip.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     { path: '@/components/ui', extensions: ['vue'] },
+    { path: '@/components/ui/Dropdown', extensions: ['vue'] },
     { path: '@/components/navigation', extensions: ['vue'] },
     { path: '@/components/layout', extensions: ['vue'] },
   ],
