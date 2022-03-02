@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full h-full items-center flex-col justify-center mt-2">
+  <div class="flex w-full h-full items-center flex-col justify-center">
     <div class="border">
       <div id="board" class="w-[600px] flex flex-wrap">
         <div

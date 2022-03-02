@@ -1,5 +1,5 @@
 <template>
-  <div class="modal">
+  <div class="modal-component">
     <transition
       enter-active-class="transition ease-out duration-300"
       enter-class="transform opacity-0"
