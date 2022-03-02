@@ -2,6 +2,7 @@
   <button
     :class="[background]"
     class="rounded-lg text-sm px-3 py-2 transition-all duration-200 font-medium"
+    @click="$emit('click')"
   >
     <slot />
   </button>
@@ -16,8 +17,8 @@ export default {
   data() {
     return {
       colors: {
-        blue: 'bg-[#4373EF] text-white',
-        gray: 'hover:bg-gray-200 text-black',
+        blue: 'bg-[#06f] hover:bg-[#005ce6] text-white',
+        gray: 'hover:bg-gray-100 hover:text-[#06f] text-black',
       },
     }
   },
